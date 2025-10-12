@@ -8,19 +8,13 @@
 
 ### ローカルリポジトリ設定からプログラム作成および実行
 ```bash
-## パッケージ情報を更新
+## パッケージ更新
 $ sudo apt update
-
-## パッケージ本体を更新
-$ sudo aptt upgrade
-
-## パッケージインストール
+$ sudo apt upgrade
 $ sudo apt install python3-venv -y
 
-## ディレクトリ作成
-$ mkdir ~/powerful2025-item-select
-
 ## ディレクトリ移動
+$ mkdir ~/powerful2025-item-select
 $ cd powerful2025-item-select
 
 ## ローカルリポジトリ初期化
@@ -58,22 +52,6 @@ $ echo '.env' >> .gitignore
 
 ## Pythonプログラム記述
 $ vi main.py
-
-コマンドの実行結果
-----------------------------------------------------------------------
-import os
-import requests
-from dotenv import load_dotenv
-
-load_dotenv()
-TOKEN = os.getenv("ACCESS_TOKEN")
-
-url = f"https://powerful2025.myshopify.com/admin/api/2024-10/products.json"
-headers = {"X-Shopify-Access-Token": TOKEN}
-res = requests.get(url, headers=headers)
-print(res.status_code)
-print(res.json())
-----------------------------------------------------------------------
 
 ## Pythonプログラム実行
 $ python3 main.py
