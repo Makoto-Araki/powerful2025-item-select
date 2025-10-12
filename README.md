@@ -82,4 +82,7 @@ $ python3 main.py
 $ git add .
 $ git commit -m 新規作成
 $ git push origin main
+
+## Python仮想環境終了
+$ deactivate
 ```
