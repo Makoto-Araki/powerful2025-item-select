@@ -6,7 +6,7 @@
 - 開発ストアのAPIトークン作成済
 - リモートリポジトリ作成済
 
-### ローカルリポジトリ設定からプログラム作成および実行
+### ローカルリポジトリ作成
 ```bash
 ## パッケージ更新
 $ sudo apt update
@@ -19,37 +19,35 @@ $ cd powerful2025-item-select
 
 ## ローカルリポジトリ初期化
 $ git init
-
-## ユーザー情報設定
 $ git config --global user.email (自分のメールアドレス)
 $ git config --global user.name Makoto-Araki
 
 ## リモートリポジトリ設定
 $ git branch -M main
 $ git remote add origin git@github.com:Makoto-Araki/powerful2025-item-select.git
+```
 
-## Pythonバージョン確認
-$ python3 --version
-
-## Python仮想環境作成
-$ python3 -m venv venv
-
+### 開発準備
+```bash
 ## Python仮想環境起動
+$ python3 --version
+$ python3 -m venv venv
 $ source venv/bin/activate
 
 ## Pythonライブラリのインストール
-$ pip install requests load_dotenv
+$ pip install -r requirements.txt
 
-## Pythonライブラリの一覧ファイル生成
-$ pip freeze > requirements.txt
-
-## APIトークンを設定ファイルに追記
+## 設定ファイル作成
 $ echo 'ACCESS_TOKEN=(APIトークン)' >> .env
-
-## 設定ファイルをリモートリポジトリのアップロード除外
 $ echo 'venv/' >> .gitignore
 $ echo '.env' >> .gitignore
 
+## Python仮想環境終了
+$ deactivate
+```
+
+### 開発作業
+```bash
 ## Pythonプログラム記述
 $ vi main.py
 
@@ -60,7 +58,4 @@ $ python3 main.py
 $ git add .
 $ git commit -m 新規作成
 $ git push origin main
-
-## Python仮想環境終了
-$ deactivate
 ```
