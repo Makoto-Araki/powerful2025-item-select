@@ -51,6 +51,9 @@ $ deactivate
 
 ### 開発作業
 ```bash
+## CSV出力用ディレクトリ作成
+$ mkdir output
+
 ## Pythonプログラム記述
 $ vi main.py
 
