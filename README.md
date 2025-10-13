@@ -44,6 +44,7 @@ $ pip install -r requirements.txt
 $ echo 'ACCESS_TOKEN=(APIトークン)' >> .env
 $ echo 'venv/' >> .gitignore
 $ echo '.env' >> .gitignore
+$ echo 'output/' >> .gitignore
 
 ## Python仮想環境終了
 $ deactivate
