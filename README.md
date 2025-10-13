@@ -52,6 +52,9 @@ $ deactivate
 
 ### 開発作業
 ```bash
+## Python仮想環境起動
+$ source venv/bin/activate
+
 ## CSV出力用ディレクトリ作成
 $ mkdir output
 
@@ -65,4 +68,7 @@ $ python3 main.py
 $ git add .
 $ git commit -m 新規作成
 $ git push origin main
+
+## Python仮想環境終了
+$ deactivate
 ```
