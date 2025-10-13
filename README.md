@@ -1,4 +1,4 @@
-# powerful2025-item-select (商品一覧取得)
+# powerful2025-item-select (商品一覧出力)
 
 ## 前提条件
 - Shopifyに開発ストアpowerful2025が存在
