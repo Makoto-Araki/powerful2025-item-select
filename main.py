@@ -104,6 +104,5 @@ df = pd.DataFrame(all_rows)
 csv_file = "output/shopify_products_single_variant.csv"
 df.to_csv(csv_file, index=False, encoding="utf-8-sig")
 
+# --- 終了メッセージ ---
 print(f"📦 CSVファイルを出力しました: {csv_file}")
-#print("💡 DataFrameの先頭5件:")
-#print(df.head())
