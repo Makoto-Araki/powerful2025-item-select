@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 from dotenv import load_dotenv
 import time
+from datetime import datetime
 
 # --- トークン読み込み ---
 load_dotenv()
@@ -100,8 +101,11 @@ print(f"✅ {len(all_rows)} 件の商品データを取得しました。")
 # --- DataFrame化 ---
 df = pd.DataFrame(all_rows)
 
+# --- ファイル名に使用する現在日時 ---
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
 # --- CSV出力 ---
-csv_file = "output/shopify_products_single_variant.csv"
+csv_file = f"output/shopify_products_{timestamp}.csv"
 df.to_csv(csv_file, index=False, encoding="utf-8-sig")
 
 # --- 終了メッセージ ---
