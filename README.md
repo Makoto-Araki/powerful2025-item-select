@@ -11,6 +11,12 @@
 ## 出力ファイルのサンプル
 ![出力されるCSVファイル](images/product_csv_01.png)
 
+## GraphQLにおけるQueryとMutationの役割
+| 種類     | 用途                             | Shopifyでの用途                                   |
+| -------- | ------------------------------- | ------------------------------------------------ |
+| Query    | データの取得（読み取り専用）       | 商品情報の取得、注文履歴の取得、コレクション一覧取得 |
+| Mutation | データの作成・更新・削除（書き込み）| productCreate、productUpdate、productDeleteなど |
+
 ## 環境構築
 ### ローカルリポジトリ作成
 ```bash
@@ -61,7 +67,7 @@ $ source venv/bin/activate
 ## CSV出力用ディレクトリ作成
 $ mkdir output
 
-## Pythonプログラム記述
+## Pythonプログラム上でGraphQLのQuery実装
 $ vi main.py
 
 ## Pythonプログラム実行
