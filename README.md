@@ -53,6 +53,7 @@ $ pip install -r requirements.txt
 $ echo 'ACCESS_TOKEN=(APIトークン)' >> .env
 $ echo '.env' >> .gitignore
 $ echo 'venv/' >> .gitignore
+$ echo 'input/' >> .gitignore
 $ echo 'output/' >> .gitignore
 
 ## Python仮想環境終了
@@ -65,6 +66,7 @@ $ deactivate
 $ source venv/bin/activate
 
 ## CSV出力用ディレクトリ作成
+$ mkdir input
 $ mkdir output
 
 ## Pythonプログラム上でGraphQLのQuery実装
